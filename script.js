@@ -1,5 +1,7 @@
 const button = document.querySelector(".weather-button");
 const inputBox = document.querySelector(".city-box");
+const weatherOutput = document.querySelector(".weather-display");
+const tempOutput = document.querySelector(".temp-display");
 
 let api_key = `522bde66bda7a301c461964248b70158`;
 let city = 'lahore';
@@ -21,9 +23,11 @@ function fetcher(inputCity) {
             let weather = data.weather[0]
             let type = weather.main
             let temperature = data.main.temp;
-            temperature =  temperature - 273.15
-            console.log(type);
-            console.log(temperature);
+            temperature =  temperature - 273.15;
+            temperature = temperature.toFixed(2);
+            
+            weatherOutput.innerHTML =  "Weather: " + type;
+            tempOutput.innerHTML =  "Temperature: " + temperature;
         })
         .catch(function(err) {
             console.log(err);
@@ -34,3 +38,4 @@ button.addEventListener(`click`, () => {
     let inputBoxCity = inputBox.value
     fetcher(inputBoxCity);
 })
+

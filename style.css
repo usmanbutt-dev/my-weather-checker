@@ -11,7 +11,7 @@ body {
     justify-content: center;
     flex-direction: column;
     gap: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 35px;
 }
 
 .bottom-container {
@@ -85,4 +85,29 @@ body {
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
+}
+
+.weather-output {
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-direction: column;
+    border: 2px solid black;
+    height: 200px;
+    width: 500px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    background-color: bisque;
+    text-align: center;
+    font-size: 16px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    font-size: x-large;
+    padding: 5px;
+}
+
+label {
+    font-size: xx-large;
 }
